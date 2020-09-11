@@ -1,0 +1,85 @@
+*
+{
+    color : rgb(255, 255, 255)
+}
+
+h1
+{
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    background-color: rgb(138, 111, 111)
+}
+
+#title
+{
+    padding-top: 160px;
+    padding-bottom: 70px;
+    background-color: rgb(34, 31, 36);
+}
+
+h1.display-1
+{
+    color : rgb(223, 223, 223);
+    font-size: 100px;
+}
+
+.gen-even
+{
+    font-family: Poppins;
+    font-size: 35px;
+    background-color: rgb(38, 43, 46);
+    color: rgb(243, 243, 243);
+}
+
+.gen-odd
+{
+    background-color: rgb(34, 31, 36);
+    font-family: Poppins;
+    font-size: 35px;
+}
+
+.member-even
+{
+    background-color: rgb(51, 58, 64);
+    color: rgb(243, 243, 243);
+}
+
+.member-odd
+{
+    background-color: rgb(38, 43, 46);
+    color: rgb(243, 243, 243);
+}
+
+.card
+{
+    border-radius: 6%;
+}
+
+.card-title
+{
+    font-size: 15pt;
+}
+
+.card-text
+{
+    font-size: 13pt;
+    color: rgb(129, 126, 126);
+}
+
+.title-line
+{
+    border-bottom:rgb(243, 243, 243) 2px solid;
+}
+
+
+
+img
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+}
