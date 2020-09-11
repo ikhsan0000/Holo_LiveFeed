@@ -1,6 +1,7 @@
 <?php
   $curl = curl_init();
-  $url = 'https://www.googleapis.com/youtube/v3/channels?part=snippet%2C%20statistics&id=UCFTLzh12_nrtzqBPsTCqenA,UCQ0UDLQCjY0rmuxCDE38FGg,UCdn5BQ06XqgXoAxIhbqw5Rg&key=AIzaSyCtCBItVJEK0xFLkX6t_CWbyQ01Ti9RSRo';
+  $API_KEY = 'AIzaSyCtCBItVJEK0xFLkX6t_CWbyQ01Ti9RSRo';
+  $url = 'https://www.googleapis.com/youtube/v3/channels?part=snippet%2C%20statistics&id=UCFTLzh12_nrtzqBPsTCqenA,UCQ0UDLQCjY0rmuxCDE38FGg,UCdn5BQ06XqgXoAxIhbqw5Rg&key='. $API_KEY;
   curl_setopt($curl, CURLOPT_URL, $url);
   curl_setopt($curl, CURLOPT_RETURNTRANSFER,1);
   $result = curl_exec($curl);
@@ -80,9 +81,10 @@
         <div class="container-xxl mt-5">
             <div class="row">
                 <?php foreach($details as $member) :
+                        $ch_ID      = $member['id'];
                         $profilepic = $member['snippet']['thumbnails']['medium']['url'];
-                        $chName = $member['snippet']['title'];
-                        $subCount = $member['statistics']['subscriberCount']; 
+                        $chName     = $member['snippet']['title'];
+                        $subCount   = $member['statistics']['subscriberCount']; 
                 ?>
                 <div class="col-sm-3">
                     <div class="card member-even mb-5">
@@ -91,7 +93,7 @@
                           <div class="container text-center">
                             <p class="card-title"><?= $chName ?> </p>
                             <p class="card-text">Subscriber: <?= $subCount ?></p>
-                            <div class="g-ytsubscribe" data-channelid="UCdn5BQ06XqgXoAxIhbqw5Rg" data-layout="default" data-count="hidden"></div>                        
+                            <div class="g-ytsubscribe" data-channelid="<?=$ch_ID; ?>" data-layout="default" data-count="hidden"></div>                        
                           </div>
                         </div>
                     </div>
