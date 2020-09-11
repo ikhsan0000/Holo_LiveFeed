@@ -1,15 +1,13 @@
 <?php
   $curl = curl_init();
-  $url = 'https://www.googleapis.com/youtube/v3/channels?part=snippet%2C%20statistics&id=UCdn5BQ06XqgXoAxIhbqw5Rg&key=AIzaSyCtCBItVJEK0xFLkX6t_CWbyQ01Ti9RSRo';
+  $url = 'https://www.googleapis.com/youtube/v3/channels?part=snippet%2C%20statistics&id=UCFTLzh12_nrtzqBPsTCqenA,UCQ0UDLQCjY0rmuxCDE38FGg,UCdn5BQ06XqgXoAxIhbqw5Rg&key=AIzaSyCtCBItVJEK0xFLkX6t_CWbyQ01Ti9RSRo';
   curl_setopt($curl, CURLOPT_URL, $url);
   curl_setopt($curl, CURLOPT_RETURNTRANSFER,1);
   $result = curl_exec($curl);
   curl_close($curl);
 
   $result = json_decode($result,true);
-  $chName = $result['items'][0]['snippet']['title'];
-  $profilepic = $result['items'][0]['snippet']['thumbnails']['medium']['url'];
-  $subCount = $result['items'][0]['statistics']['subscriberCount'];
+  $details = $result['items'];  
 ?>
 
 <!doctype html>
@@ -19,8 +17,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   
-
-
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;1,100&display=swap" rel="stylesheet"> 
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
@@ -83,7 +79,11 @@
         </div>
         <div class="container-xxl mt-5">
             <div class="row">
-            <?php for($i = 0; $i<5 ; $i++): ?>
+                <?php foreach($details as $member) :
+                        $profilepic = $member['snippet']['thumbnails']['medium']['url'];
+                        $chName = $member['snippet']['title'];
+                        $subCount = $member['statistics']['subscriberCount']; 
+                ?>
                 <div class="col-sm-3">
                     <div class="card member-even mb-5">
                         <img class="profile mt-4" src="<?=$profilepic ?>">
@@ -91,11 +91,12 @@
                           <div class="container text-center">
                             <p class="card-title"><?= $chName ?> </p>
                             <p class="card-text">Subscriber: <?= $subCount ?></p>
-                            <div class="g-ytsubscribe" data-channelid="UCdn5BQ06XqgXoAxIhbqw5Rg" data-layout="default" data-count="hidden"></div>                        </div>
+                            <div class="g-ytsubscribe" data-channelid="UCdn5BQ06XqgXoAxIhbqw5Rg" data-layout="default" data-count="hidden"></div>                        
                           </div>
+                        </div>
                     </div>
-                </div>
-                <?php endfor; ?>
+                  </div>
+                <?php endforeach;?>
             </div>
         </div>
       </section>
