@@ -1,7 +1,7 @@
 <?php
   $curl = curl_init();
   $API_KEY = 'AIzaSyCtCBItVJEK0xFLkX6t_CWbyQ01Ti9RSRo';
-  $url = 'https://www.googleapis.com/youtube/v3/channels?part=snippet%2C%20statistics&id=UCFTLzh12_nrtzqBPsTCqenA,UCQ0UDLQCjY0rmuxCDE38FGg,UCdn5BQ06XqgXoAxIhbqw5Rg&key='. $API_KEY;
+  $url = 'https://www.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=UCFTLzh12_nrtzqBPsTCqenA&id=UCQ0UDLQCjY0rmuxCDE38FGg&id=UCdn5BQ06XqgXoAxIhbqw5Rg&key=AIzaSyCtCBItVJEK0xFLkX6t_CWbyQ01Ti9RSRo';
   curl_setopt($curl, CURLOPT_URL, $url);
   curl_setopt($curl, CURLOPT_RETURNTRANSFER,1);
   $result = curl_exec($curl);
@@ -70,7 +70,7 @@
 
       <section class="text-center container-flex " id="title">
         <h1 class="display-1 ">
-            Welcome ! 
+            WELCOME
         </h1>
       </section>
 
