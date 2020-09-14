@@ -75,8 +75,10 @@
       </section>
 
       <section class="gen-even">
-        <div class="container-xxl display-6 pt-5 gen-even title-line">
+        <div class="container-xxl display-6 pt-5 gen-even">
+          <div class="title-line">
             Gen Zero
+          </div>
         </div>
         <div class="container-xxl mt-5">
             <div class="row">
@@ -105,8 +107,10 @@
 
 
       <section class="gen-odd">
-        <div class="container-xxl display-6 pt-5 gen-odd title-line">
-            Gen One
+        <div class="container-xxl display-6 pt-5 gen-odd">
+          <div class="title-line">
+              Gen One
+          </div>
         </div>
         <div class="container-xxl mt-5">
             <div class="row">
@@ -127,13 +131,15 @@
       </section>
 
       <section class="gen-even">
-        <div class="container-xxl display-6 pt-5 gen-even title-line">
+        <div class="container-xxl display-6 pt-5 gen-even">
+        <div class="title-line">
             Gen Zero
+        </div>
         </div>
         <div class="container-xxl mt-5">
             <div class="row">
             <?php for($i = 0; $i<5 ; $i++): ?>
-                <div class="col-sm-3">
+                <div class="col">
                     <div class="card member-even mb-5">
                         <img class="profile mt-4" src="profile-icon.png">
                         <div class="card-body">
