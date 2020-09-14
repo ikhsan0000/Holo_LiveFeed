@@ -6,7 +6,11 @@
 
 .navbar
 {
-    font-weight: bold;
+    font-size: 17px;
+}
+
+.navbar-brand
+{
     font-size: 20px;
 }
 

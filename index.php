@@ -31,7 +31,7 @@
   <body>
 
     
-    <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+    <nav class="navbar fixed-top navbar-expand-xl navbar-dark bg-dark ">
         <div class="container mt-2 mb-2">
             <a class="navbar-brand" href="#">
                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-broadcast" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
