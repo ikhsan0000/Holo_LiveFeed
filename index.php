@@ -58,9 +58,10 @@
                     <li><a class="dropdown-item" href="#">Gen 3</a></li>
                     <li><a class="dropdown-item" href="#">Gen 4</a></li>
                     <li><a class="dropdown-item" href="#">Gen 5</a></li>
+                    <li><a class="dropdown-item" href="#">Holostars</a></li>
                     <li><a class="dropdown-item" href="#">Holo CN</a></li>
                     <li><a class="dropdown-item" href="#">Holo ID</a></li>
-                    <li><a class="dropdown-item" href="#">Holostars</a></li>
+                    <li><a class="dropdown-item" href="#">Holo EN</a></li>
                 </ul>
               </li>
             </ul>
@@ -69,7 +70,10 @@
       </nav>
 
       <section class="text-center container-flex " id="title">
-        <h1 class="display-1 ">WELCOME</h1>
+        <h1 class="display-1" id="absolute">DEGENERATES!</h1>   
+        <div class="container" id="welcome">
+          <h1 class="display-1 welcome-title" id="welcome-text">WELCOME</h1>
+        </div>
       </section>
 
       <section class="gen-even">
